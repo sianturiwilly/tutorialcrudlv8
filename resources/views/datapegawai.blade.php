@@ -33,19 +33,23 @@
                       </tr>
                     </thead>
                     <tbody>
+                    @php
+                        $no = 1;
+                    @endphp
                     @foreach ($data as $row)
                         <tr>
-                            <th scope="row">{{ $row->id }}</th>
+                            <th scope="row">{{ $no++ }}</th>
                             <td>{{ $row->nama }}</td>
                             <td>{{ $row->jeniskelamin }}</td>
                             <td>0{{ $row->notelepon }}</td>
                             <td>{{ $row->created_at->format('d M Y') }}</td>
                             <td>
-                                <button type="button" class="btn btn-danger">Hapus</button>
+                                <a href="/delete/{{ $row->id }}" class="btn btn-danger">Hapus</a>
                                 <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Edit</a>
                             </td>
                         </tr>
                     @endforeach
+
                     </tbody>
                   </table>
             </div>
