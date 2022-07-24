@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2022 at 05:49 AM
+-- Generation Time: Jul 24, 2022 at 09:01 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -32,6 +32,7 @@ CREATE TABLE `employees` (
   `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `jeniskelamin` enum('pria','wanita') COLLATE utf8mb4_unicode_ci NOT NULL,
   `notelepon` bigint(20) NOT NULL,
+  `foto` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -40,11 +41,10 @@ CREATE TABLE `employees` (
 -- Dumping data for table `employees`
 --
 
-INSERT INTO `employees` (`id`, `nama`, `jeniskelamin`, `notelepon`, `created_at`, `updated_at`) VALUES
-(1, 'Willi Sianturi', 'pria', 85889894818, '2022-07-23 15:42:53', '2022-07-23 15:43:07'),
-(2, 'Willy', 'pria', 85723440902, '2022-07-23 08:36:16', '2022-07-23 08:36:16'),
-(3, 'Nike Ardilla', 'wanita', 85723440902, '2022-07-23 08:37:46', '2022-07-23 20:48:33'),
-(5, 'Darwis', 'pria', 87889002344, '2022-07-23 08:58:31', '2022-07-23 08:58:31');
+INSERT INTO `employees` (`id`, `nama`, `jeniskelamin`, `notelepon`, `foto`, `created_at`, `updated_at`) VALUES
+(1, 'Willi Sianturi', 'pria', 85889894818, 'willi.jpg', '2022-07-23 23:47:12', '2022-07-23 23:47:12'),
+(2, 'Willi', 'pria', 81390223490, 'willi1.jpg', '2022-07-23 23:54:42', '2022-07-23 23:54:42'),
+(3, 'Nike Ardilla', 'wanita', 87890902933, 'gadis_ayu.jpg', '2022-07-24 00:00:25', '2022-07-24 00:00:25');
 
 -- --------------------------------------------------------
 
@@ -184,7 +184,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
