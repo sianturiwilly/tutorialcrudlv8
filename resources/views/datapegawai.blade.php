@@ -42,7 +42,7 @@
                             <td>{{ $row->created_at->format('d M Y') }}</td>
                             <td>
                                 <button type="button" class="btn btn-danger">Hapus</button>
-                                <button type="button" class="btn btn-info">Edit</button>
+                                <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Edit</a>
                             </td>
                         </tr>
                     @endforeach
