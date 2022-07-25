@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2022 at 09:43 AM
+-- Generation Time: Jul 25, 2022 at 07:07 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -44,7 +44,10 @@ CREATE TABLE `employees` (
 INSERT INTO `employees` (`id`, `nama`, `jeniskelamin`, `notelepon`, `foto`, `created_at`, `updated_at`) VALUES
 (1, 'Willi Sianturi', 'pria', 85889894818, 'willi.jpg', '2022-07-23 23:47:12', '2022-07-23 23:47:12'),
 (2, 'Willi', 'pria', 81390223490, 'willi1.jpg', '2022-07-23 23:54:42', '2022-07-23 23:54:42'),
-(3, 'Nike Ardilla', 'wanita', 87890902933, 'gadis_ayu.jpg', '2022-07-24 00:00:25', '2022-07-24 00:00:25');
+(3, 'Nike Ardilla', 'wanita', 87890902933, 'gadis_ayu.jpg', '2022-07-24 00:00:25', '2022-07-24 00:00:25'),
+(5, 'Darwis Purba', 'pria', 87890932104, 'gettyimages-846571724-2048x2048.jpg', '2022-07-24 21:45:29', '2022-07-24 21:45:29'),
+(6, 'Cristiano Ronaldo', 'pria', 85723550911, 'gettyimages-1337497848-2048x2048.jpg', '2022-07-24 21:48:32', '2022-07-24 21:48:33'),
+(7, 'David Beckham', 'pria', 81590221975, 'gettyimages-56974985-2048x2048.jpg', '2022-07-24 22:07:18', '2022-07-24 22:07:18');
 
 -- --------------------------------------------------------
 
@@ -184,7 +187,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
