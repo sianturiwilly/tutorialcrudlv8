@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2022 at 07:07 AM
+-- Generation Time: Jul 26, 2022 at 05:51 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -47,7 +47,10 @@ INSERT INTO `employees` (`id`, `nama`, `jeniskelamin`, `notelepon`, `foto`, `cre
 (3, 'Nike Ardilla', 'wanita', 87890902933, 'gadis_ayu.jpg', '2022-07-24 00:00:25', '2022-07-24 00:00:25'),
 (5, 'Darwis Purba', 'pria', 87890932104, 'gettyimages-846571724-2048x2048.jpg', '2022-07-24 21:45:29', '2022-07-24 21:45:29'),
 (6, 'Cristiano Ronaldo', 'pria', 85723550911, 'gettyimages-1337497848-2048x2048.jpg', '2022-07-24 21:48:32', '2022-07-24 21:48:33'),
-(7, 'David Beckham', 'pria', 81590221975, 'gettyimages-56974985-2048x2048.jpg', '2022-07-24 22:07:18', '2022-07-24 22:07:18');
+(7, 'David Beckham', 'pria', 81590221975, 'gettyimages-56974985-2048x2048.jpg', '2022-07-24 22:07:18', '2022-07-24 22:07:18'),
+(8, 'Prajudi William Chrisdeardo', 'pria', 85889812033, 'willi1.jpg', '2022-07-25 20:20:28', '2022-07-25 20:20:28'),
+(9, 'Wayne Rooney', 'pria', 81340403222, '81389.jpg', '2022-07-25 20:20:49', '2022-07-25 20:20:49'),
+(10, 'Teh Nike Ratnadilla', 'wanita', 85823334001, '223231488_211070671024384_6614654802945804628_n.jpg', '2022-07-25 20:21:44', '2022-07-25 20:21:44');
 
 -- --------------------------------------------------------
 
@@ -187,7 +190,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`

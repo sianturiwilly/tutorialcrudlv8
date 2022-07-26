@@ -16,7 +16,20 @@
     <h1 class="text-center mb-4">Data Pegawai</h1>
 
         <div class="container">
-            <a href="/tambahpegawai" class="btn btn-primary">Tambah +</a>
+            <a href="/tambahpegawai" class="btn btn-success">Tambah +</a>
+
+            <div class="row g-3 align-items-center mt-2">
+                <div class="col-auto">
+                <form action="/pegawai" method="GET">
+                    <input type="search" id="inputPassword6" name="search" class="form-control" aria-describedby="passwordHelpInline">
+                </form>
+                </div>
+
+                <div class="col-auto">
+                <a href="/exportpdf" class="btn btn-info">Export PDF</a>
+                </div>
+                
+            </div>
             <div class="row">
             <!-- @if($message = Session::get('success'))
                 <div class="alert alert-success" role="alert">
@@ -39,16 +52,16 @@
                     @php
                         $no = 1;
                     @endphp
-                    @foreach ($data as $row)
+                    @foreach ($data as $index => $row)
                         <tr>
-                            <th scope="row">{{ $no++ }}</th>
+                            <th scope="row">{{ $index + $data->firstItem() }}</th>
                             <td>{{ $row->nama }}</td>
                             <td>
                                 <img src="{{ asset('img/'.$row->foto) }}" alt="" style="width: 40px;">
                             </td>
                             <td>{{ $row->jeniskelamin }}</td>
                             <td>{{ $row->notelepon }}</td>
-                            <td>{{ $row->created_at->format('D M Y') }}</td>
+                            <td>{{ $row->created_at->format('d M Y') }}</td>
                             <td>
                                 <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Edit</a>
                                 <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}" data-nama="{{ $row->nama }}">Delete</a>
@@ -58,6 +71,7 @@
 
                     </tbody>
                 </table>
+                {{ $data->links() }}
             </div>
         </div>
 
