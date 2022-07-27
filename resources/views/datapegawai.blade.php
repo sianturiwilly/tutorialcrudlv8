@@ -23,7 +23,12 @@
                 <form action="/pegawai" method="GET">
                     <input type="search" id="inputPassword6" name="search" class="form-control" aria-describedby="passwordHelpInline">
                 </form>
-                </div>                
+                </div>
+                
+                <div class="col-auto">
+                    <a href="/exportpdf" class="btn btn-info">Export PDF</a>
+                </div>
+
             </div>
             <div class="row">
             {{-- @if($message = Session::get('success'))
@@ -88,7 +93,6 @@
         $('.delete').click(function(){
             var pegawaiid = $(this).attr('data-id');
             var nama = $(this).attr('data-nama');
-
             swal({
                 title: "Apakah kamu yakin?",
                 text: "Kamu akan menghapus data pegawai nama "+nama+".",
@@ -113,6 +117,5 @@
     @if (Session::has('success'))
         toastr.success("{{ Session::get('success') }}")
     @endif
-
     </script>
 </html>

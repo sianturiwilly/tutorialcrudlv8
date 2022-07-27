@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +27,6 @@ Route::get('/tampilkandata/{id}', [EmployeeController::class, 'tampilkandata'])-
 Route::post('/updatedata/{id}', [EmployeeController::class, 'updatedata'])->name('updatedata');
 
 Route::get('/delete/{id}', [EmployeeController::class, 'delete'])->name('delete');
+
+// Mengekspor PDF
+Route::get('/exportpdf', [EmployeeController::class, 'exportpdf'])->name('exportpdf');
