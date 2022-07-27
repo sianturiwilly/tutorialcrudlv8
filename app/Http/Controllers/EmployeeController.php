@@ -7,17 +7,19 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function index(){
-        
-        // return 'Sukses';
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $data = Employee::where('nama','LIKE','%' .$request->search.'%')->paginate(5);
+        } else {
+            $data = Employee::paginate(5);
+        }
+
         // $data = Employee::all();
-        // dd($data);
-        $data = Employee::paginate(5);
         return view('datapegawai', compact('data'));
     }
 
     public function tambahpegawai(){
-        // $dataagama = Religion::all();
         return view('tambahdata');
     }
 
@@ -25,7 +27,7 @@ class EmployeeController extends Controller
         // dd($request->all());
         $data = Employee::create($request->all());
         if($request->hasFile('foto')){
-            $request->file('foto')->move('img/', $request->file('foto')->getClientOriginalName());
+            $request->file('foto')->move('../img/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
@@ -33,26 +35,21 @@ class EmployeeController extends Controller
     }
 
     public function tampilkandata($id){
-        
+
         $data = Employee::find($id);
         // dd($data);
-
         return view('tampildata', compact('data'));
     }
 
     public function updatedata(Request $request, $id){
         $data = Employee::find($id);
         $data->update($request->all());
-        return redirect()->route('pegawai')->with('success', 'Data berhasil diubah.');
+        return redirect()->route('pegawai')->with('success', 'Data berhasil diupdate.');
     }
 
     public function delete($id){
         $data = Employee::find($id);
         $data->delete();
-        return redirect()->route('pegawai')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('pegawai')->with('success', 'Data berhasil dihapus.');;
     }
 }
-
-// Catatan:
-// <td>{{ $row->created_at->diffForHumans() }}</td>
-// <td>{{ $row->created_at->format('D M Y') }}</td>

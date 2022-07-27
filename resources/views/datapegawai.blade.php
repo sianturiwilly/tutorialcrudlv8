@@ -23,19 +23,14 @@
                 <form action="/pegawai" method="GET">
                     <input type="search" id="inputPassword6" name="search" class="form-control" aria-describedby="passwordHelpInline">
                 </form>
-                </div>
-
-                <div class="col-auto">
-                <a href="/exportpdf" class="btn btn-info">Export PDF</a>
-                </div>
-                
+                </div>                
             </div>
             <div class="row">
-            <!-- @if($message = Session::get('success'))
+            {{-- @if($message = Session::get('success'))
                 <div class="alert alert-success" role="alert">
                     {{ $message }}
                 </div>
-            @endif -->
+            @endif --}}
                 <table class="table">
                     <thead>
                         <tr>
