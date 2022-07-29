@@ -30,3 +30,6 @@ Route::get('/delete/{id}', [EmployeeController::class, 'delete'])->name('delete'
 
 // Mengekspor PDF
 Route::get('/exportpdf', [EmployeeController::class, 'exportpdf'])->name('exportpdf');
+
+// Mengekspor Excel
+Route::get('/exportexcel', [EmployeeController::class, 'exportexcel'])->name('exportexcel');
