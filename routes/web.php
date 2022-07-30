@@ -33,3 +33,6 @@ Route::get('/exportpdf', [EmployeeController::class, 'exportpdf'])->name('export
 
 // Mengekspor Excel
 Route::get('/exportexcel', [EmployeeController::class, 'exportexcel'])->name('exportexcel');
+
+// Mengimpor Excel
+Route::post('/importexcel', [EmployeeController::class, 'importexcel'])->name('importexcel');
