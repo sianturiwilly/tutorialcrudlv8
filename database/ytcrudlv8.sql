@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2023 at 04:05 PM
+-- Generation Time: Feb 20, 2023 at 06:56 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -41,7 +41,10 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`id`, `nama`, `jeniskelamin`, `notelepon`, `created_at`, `updated_at`) VALUES
-(1, 'Willi Chrisdeardo Sianturi', 'pria', 85889894818, NULL, NULL);
+(1, 'Willi Chrisdeardo Sianturi', 'pria', 85889894818, '2023-02-19 05:43:22', '2023-02-18 17:00:00'),
+(2, 'Coba', 'wanita', 81245663200, '2023-02-19 20:43:52', '2023-02-19 20:43:52'),
+(3, 'Willi', 'pria', 81286317890, '2023-02-19 20:53:16', '2023-02-19 20:53:16'),
+(4, 'Data Baru', 'pria', 81523445099, '2023-02-19 22:51:39', '2023-02-19 22:51:39');
 
 -- --------------------------------------------------------
 
@@ -182,7 +185,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
