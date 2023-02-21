@@ -41,6 +41,9 @@
                         <tr>
                             <th scope="row">{{ $no++ }}</th>
                             <td>{{ $row->nama }}</td>
+                            <td>
+                              <img src="{{ asset('fotopegawai/'.$row->foto) }}" alt="" style="width: 40px;">
+                            </td>
                             <td>{{ $row->jeniskelamin }}</td>
                             <td>0{{ $row->notelepon }}</td>
                             <td>{{ $row->created_at->format('d M Y') }}</td>
