@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2023 at 05:50 PM
+-- Generation Time: Feb 22, 2023 at 06:00 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -47,7 +47,7 @@ INSERT INTO `employees` (`id`, `nama`, `jeniskelamin`, `notelepon`, `foto`, `cre
 (4, 'Willi', 'pria', 81286317890, 'willy.jpg', '2023-02-21 07:56:10', '2023-02-21 07:56:10'),
 (5, 'Darwis Purba', 'pria', 82277529799, 'CRISTIANO_550x650.jpg', '2023-02-21 09:16:23', '2023-02-21 09:16:23'),
 (6, 'Prajudi William Chrisdeardo', 'pria', 85722401993, 'willi1.jpg', '2023-02-21 09:19:02', '2023-02-21 09:19:02'),
-(7, 'Dio Sianturi', 'pria', 81534001995, 'gettyimages-55837806-1024x1024.jpg', '2023-02-21 09:47:14', '2023-02-21 09:47:14'),
+(7, 'Dio Sianturi', 'pria', 81534001995, 'IMG_0581.jpg', '2023-02-21 09:47:14', '2023-02-21 09:47:14'),
 (8, 'Daniel Sinaga', 'pria', 85890992555, 'gettyimages-55837806-1024x1024.jpg', '2023-02-21 09:48:19', '2023-02-21 09:48:19'),
 (9, 'Ucok', 'pria', 81329332000, '2ac1414a-016c-4459-bdbe-a78d89798aa4.jpg', '2023-02-21 09:48:40', '2023-02-21 09:48:40'),
 (10, 'Nike', 'wanita', 81519752712, 'nikeardilla.jpg', '2023-02-21 09:49:03', '2023-02-21 09:49:03');

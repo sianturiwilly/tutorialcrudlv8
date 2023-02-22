@@ -24,6 +24,11 @@
                 <input type="search" id="inputPassword6" name="search" class="form-control" aria-describedby="passwordHelpInline">
               </form>
               </div>
+
+              <div class="col-auto">
+                <a href="/exportpdf" class="btn btn-info">Export PDF</a>
+              </div>
+
             </div>
             <div class="row">
               {{-- @if($message = Session::get('success'))
@@ -46,9 +51,9 @@
                     @php
                       $no = 1;
                     @endphp
-                    @foreach($data as $row)
+                    @foreach($data as $index => $row)
                         <tr>
-                            <th scope="row">{{ $no++ }}</th>
+                            <th scope="row">{{ $index + $data->firstItem() }}</th>
                             <td>{{ $row->nama }}</td>
                             <td>
                               <img src="{{ asset('fotopegawai/'.$row->foto) }}" alt="" style="width: 40px;">
@@ -64,6 +69,7 @@
                     @endforeach          
                     </tbody>
                   </table>
+                  {{ $data->links() }}
             </div>
         </div>
 

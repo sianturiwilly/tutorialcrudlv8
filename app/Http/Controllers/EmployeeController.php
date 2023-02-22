@@ -4,17 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use PDF;
 
 class EmployeeController extends Controller
 {
-    public function index(Request $request){
+    public function index(){
 
-        if($request->has('search')){
-            $data = Employee::where('nama', 'LIKE', '%' .$request->search.'%')->paginate(5);
-        }else{
-            $data = Employee::paginate(5);
-        }
-
+        $data = Employee::paginate(5);
         return view('datapegawai',compact('data'));
     }
 
@@ -50,5 +46,14 @@ class EmployeeController extends Controller
         $data = Employee::find($id);
         $data->delete();
         return redirect()->route('pegawai')->with('success','Data berhasil dihapus.');
+    }
+
+    public function exportpdf(){
+        $data = Employee::all();
+
+        view()->share('data', $data);
+        $pdf = PDF::loadview('datapegawai-pdf');
+        return $pdf->download('data.pdf');
+        // return 'Berhasil';
     }
 }
